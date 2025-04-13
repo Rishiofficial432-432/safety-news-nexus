@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				safety: {
+					'low': '#22c55e',     // Green for low risk
+					'medium': '#f97316',  // Orange for medium risk
+					'high': '#ef4444',    // Red for high risk
+					'cyber': '#8b5cf6',   // Purple for cyber risks
+					'health': '#06b6d4',  // Cyan for health risks
+					'weather': '#3b82f6', // Blue for weather risks
+					'disaster': '#f43f5e', // Pink for disaster risks
+					'geo': '#f59e0b',      // Amber for geopolitical risks
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'marquee': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(-100%)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'marquee': 'marquee 25s linear infinite',
+				'fade-in': 'fade-in 0.5s ease-out'
 			}
 		}
 	},
